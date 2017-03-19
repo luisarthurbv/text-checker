@@ -25,7 +25,7 @@ public class StreamUtils {
      * @param input     stream to be processed. Cannot be <code>null</code>.
      * @return          <code>char</code> with the condition described.
      */
-    public static char firstChar(Stream input) {
+    public static char firstChar(Stream input) throws CharNotFoundException {
         if(input == null) {
             throw new IllegalArgumentException("Input cannot be null");
         }
