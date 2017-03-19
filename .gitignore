@@ -9,3 +9,6 @@ gradle/
 
 #removing build files
 build/
+
+#removing generated javadoc files
+javadoc/

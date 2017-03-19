@@ -8,9 +8,27 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Util class created to get a char, with a given condition, from a stream.
+ *
+ * @author Luís Arhtur Bighetti Valini
+ * @version 1.0
+ */
 public class StreamUtils {
 
+    /**
+     * Get the firsChar in the stream with the given condition:
+     *      it is a vocal (that doesn't appear more in the stream), which is preceded by a cosoant,
+     *      which is preceded by a vocal
+     * @exception IllegalArgumentException when input is null.
+     * @exception CharNotFoundException when no char is found with the given condition.
+     * @param input     stream to be processed. Cannot be <code>null</code>.
+     * @return          <code>char</code> with the condition described.
+     */
     public static char firstChar(Stream input) {
+        if(input == null) {
+            throw new IllegalArgumentException("Input cannot be null");
+        }
         Map<Character, Character> vocalsRealValueMap = new HashMap<>();
         Map<Character, Integer> vocalsIndexMap = new HashMap<>();
         List<Character> sequence = new ArrayList<>();
@@ -55,6 +73,9 @@ public class StreamUtils {
                 CharUtils.isVocal(sequence.get(2));
     }
 
+    /**
+     * Exception which signals that a stream has no chars with the conditions imposed by the method.
+     */
     public static class CharNotFoundException extends RuntimeException {
 
         public CharNotFoundException() {

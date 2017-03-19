@@ -1,10 +1,21 @@
 package com.luisarthurbv.text.stream;
 
+/**
+ * Incapsulates array in a stream.
+ *
+ * @author Luís Arhtur Bighetti Valini
+ * @version 1.0
+ */
+
 public class ArrayStream implements Stream {
 
     private char[] array;
     private int currentIndex;
 
+    /**
+     * @throws IllegalArgumentException when array is null
+     * @param array
+     */
     public ArrayStream(char[] array) {
         if (array == null) {
             throw new IllegalArgumentException("Array cannot be null");

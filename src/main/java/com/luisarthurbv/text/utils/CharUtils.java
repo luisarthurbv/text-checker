@@ -2,6 +2,13 @@ package com.luisarthurbv.text.utils;
 
 import java.util.regex.Pattern;
 
+/**
+* Util class that checks some characteristics from a char.
+*
+* @author Luís Arhtur Bighetti Valini
+* @version 1.0
+*/
+
 public class CharUtils {
 
     private static final int CAPITAL_LETTER_LOWER_CASE_DISTANCE = 'A' - 'a';
