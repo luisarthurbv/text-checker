@@ -1,0 +1,11 @@
+#removing gradle local files
+gradlew
+gradlew.bat
+gradle/
+.gradle/
+
+#removing intellij files
+.idea/
+
+#removing build files
+build/
